@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mental health assitance</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container"></div>
-      <h1>MentalHealth</h1>
-      <p>Your personal mental wellness companion.</p>
-    </header>
-    <textarea id="userInput"placeholder="Write your journal,thought or feeling..."></textarea> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    
-    <footer></footer>
-  </body>
+  <div class="container">
+    <div class="tab">
+      <button id="loginTab" class="active" onclick="showForm('login')">Login</button>
+      <button id="signupTab" onclick="showForm('signup')">Sign Up</button>
+    </div>
+
+    <form id="loginForm" class="active">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button class="submit-btn">Login</button>
+    </form>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button class="submit-btn">Sign Up</button>
+    </form>
+  </div>
+ 
+  <script>
+    function showForm(type) {
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const loginTab = document.getElementById('loginTab');
+      const signupTab = document.getElementById('signupTab');
+
+      if (type === 'login') {
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+        loginTab.classList.add('active');
+        signupTab.classList.remove('active');
+      } else {
+        signupForm.classList.add('active');
+        loginForm.classList.remove('active');
+        signupTab.classList.add('active');
+        loginTab.classList.remove('active');
+      }
+    }
+  </script>
+</body>
 </html>
