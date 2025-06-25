@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <header> MENTAL HEALTH AI THERAPIST 
+    <h1>Your private space to reflect and grow!</h1>
+  </header>
+  
   <div class="container">
     <div class="tab">
       <button id="loginTab" class="active" onclick="showForm('login')">Login</button>
@@ -18,6 +21,7 @@
       <input type="text" placeholder="Username" required />
       <input type="password" placeholder="Password" required />
       <button class="submit-btn">Login</button>
+      
     </form>
 
     <form id="signupForm">
@@ -27,7 +31,8 @@
       <button class="submit-btn">Sign Up</button>
     </form>
   </div>
- 
+
+
   <script>
     function showForm(type) {
       const loginForm = document.getElementById('loginForm');
@@ -48,5 +53,8 @@
       }
     }
   </script>
+  <script> src="script.js"</script>
+
+
 </body>
 </html>

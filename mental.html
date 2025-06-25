@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mental Health Journal</title>
+  <link rel="stylesheet" href="mental.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>y
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Mental Health Journal & AI Therapist</h1>
+      <p>A private space to reflect, grow, and heal.</p> 
+      <img src="https://www.caerlaverock.org.uk/wp-content/uploads/2020/04/mental-health-.jpg ">
+      <div class="hero-buttons">
+        <button onclick="showSection('journal')">Journal Entry</button>
+        <button onclick="showSection('therapist')">Talk to AI</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal Section -->
+  <section id="journal" class="content-section hidden">
+    <h2>Journal Entry</h2>
+    <div class="section-flex">
+      <img src=" https://lifepointhealth.net/assets/posts/lp-blog-thumb-americans-mental-health-crisis.jpg "  >
+      <form>
+        <textarea placeholder="How do you feel today?"></textarea>
+        <button type="submit"><i class="fas fa-save"></i> Save Entry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- AI Therapist Section -->
+  <section id="therapist" class="content-section hidden">
+    <h2>AI Therapist</h2>
+    <div class="section-flex">
+      <img src="  https://th.bing.com/th/id/OIP._t-na6Lzmc4q5TfMWMjhCQHaE7?r=0&rs=1&pid=ImgDetMain">
+      <div class="chat-box">
+        <div class="message bot">Hello. I'm your AI therapist. What's on your mind?</div>
+        <input type="text" placeholder="Type your message here..." />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mental Health Journal. ABGll rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('journal').classList.add('hidden');
+      document.getElementById('therapist').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+      window.scrollTo({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

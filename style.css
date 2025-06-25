@@ -1,7 +1,29 @@
 * {
   box-sizing: border-box;
 }
+header{
+    text-align: center;
+    z-index: 1000s;
+    top: 0;
+    text-decoration:solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:50px;
+    color: #e2e4e9;
+    padding: 20px 0;
+    position: fixed;
+    box-shadow: 0px 9px 10px white; 
 
+}
+header h1{
+    text-align: start;
+    text-decoration: dotted;
+    font-style: italic;
+    font-size:large;
+    color: #e2e4e9;
+    margin: 0;
+    letter-spacing: 1px;
+
+}
 body {
   font-family: Arial, sans-serif;
   background: #f0f2f5;
@@ -19,10 +41,11 @@ body {
 
 .container {
   width: 350px;
-  background: white;
+  background: rgb(95, 129, 202);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  opacity: 100%;
 }
 
 .tab {
@@ -69,6 +92,10 @@ button.submit-btn {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+}
+a{
+  font-display:auto;
 }
 
 button.submit-btn:hover {
